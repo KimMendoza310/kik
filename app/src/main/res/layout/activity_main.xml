@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="281dp"
+            android:layout_height="79dp"
+            android:text="Registro de Usuario"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/Nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="69dp"
+            android:layout_height="55dp"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="27dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Nombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="Nombre"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Apellido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Nombre"
+            app:startIconDrawable="@drawable/ic_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Apellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_user"
+                android:hint="Apellido"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/empresa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/FechaNacimiento"
+            app:startIconDrawable="@drawable/ic_empresa">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_empresa"
+                android:hint="Empresa"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/FechaNacimiento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de Nacimiento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Apellido"
+            app:startIconDrawable="@drawable/ic_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/VFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_date"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rgGenero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/empresa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/Masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/Femenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Correo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rgGenero"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/VCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Telefono"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Correo"
+            app:startIconDrawable="@drawable/ic_telefono">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/VTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_telefono"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            app:layout_constraintTop_toBottomOf="@id/Telefono"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
